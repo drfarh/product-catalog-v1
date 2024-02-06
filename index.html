@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 2 - Product Catalog I/O using webpage</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="src/style.css" />
+</head>
+
+<body class="bg-blue-200">
+<div class="max-w-sm mx-auto bg-gray-100 shadow-lg rounded-lg overflow-hidden mt-4">
+<div class="p-4">
+    <h1 id="header" class="font-bold text-2xl font-serif">Product Catalog Dashboard</h1>
+    <form id="product-form">
+		<label for="product-name" class="font-bold font-serif mt-2">Product Name: </label>
+        <input type="text" id="product-name" placeholder="Enter the product name" class="border-2 rounded-md border-gray-800 mt-2 mx-1" /> <br>
+        <label for="product-model" class="font-bold font-serif mt-2">Product Model: </label>
+        <input type="text" id="product-model" placeholder="Enter the product model" class="border-2 rounded-md border-gray-800 mt-2 mx-auto" /> <br>
+        <label for="product-price" class="font-bold font-serif mt-2">Product Price: </label>
+		<input type="number" id="product-price" placeholder="Enter the product cost" class="border-2 rounded-md border-gray-800 mt-2 mx-2" /> <br>
+        <label for="product-amount" class="font-bold font-serif mt-2">Prod. Quantity: </label>
+		<input type="number" id="product-amount" placeholder="Enter the product quantity" class="border-2 rounded-md border-gray-800 mt-2 mx-auto" /> <br>
+
+        <input type="reset" value="Reset" class="bg-blue-300 hover:bg-blue-500 text-black font-bold font-serif py-2 px-4 rounded-xl mt-4 shadow-lg"/>
+		<input type="submit" value="Add New Product" class="bg-blue-300 hover:bg-blue-500 text-black font-bold font-serif py-2 px-4 rounded-xl mt-4 mx-4 shadow-lg"/>
+    </form>
+</div>
+</div>
+
+<div class="max-w-sm mx-auto bg-gray-100 shadow-lg rounded-lg overflow-hidden mt-8 scroll-mx-6 max-h-60 overflow-y-auto">
+<div class="p-4">
+    <h1 class="font-bold text-2xl font-serif">Product List:</h1>
+    <div id="output"></div>
+</div>
+</div>
+
+    <script src="mvp.js"></script>
+
+</body>
+</html>
