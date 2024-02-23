@@ -1,38 +1,11 @@
-// Initialize an empty array to hold the inventory
-let inventory = [];
+import { product } from "./product.js";
 
-const productForm = document.querySelector('#product-form');
-const productOutput = document.querySelector("#output");
+// Product object declation
+const product1 = new product("McBook", 2000, "$");
+console.log(product1.getProduct());
 
-// Input from webpage
-let action1 = function (event) {
-  event.preventDefault();
-  // Ask user for product details
-  const name = document.querySelector('#product-name');
-  const model = document.querySelector('#product-model');
-  const cost = document.querySelector('#product-price');
-  const quantity = document.querySelector('#product-amount');
+const product2 = new product("iPad", 800, "£");
+console.log(product2.getProduct());
 
-  // Create a product object with the entered details
-  let product = {
-    productName: name.value,
-    productModel: model.value,
-    productCost: Number(cost.value),
-    productQuantity: Number(quantity.value),
-  };
-
-  // Add the product to the inventory array
-  inventory.push(product);
-  
-  let display = " ";
-  for (let item of inventory) {
-    // alert(`Product Name: ${item['productModel']}`);
-    display += `Product Name: ${item['productName']} <br>Product Model: ${item['productModel']} <br>Product Cost: $${item['productCost']} <br> Product Quantity: ${item['productQuantity']} <br><br>`;
-
-  }
-
-  productOutput.innerHTML = display;
-};
-
-productForm.addEventListener('submit', action1);
-
+const product3 = new product("iPhone", 1200, "$");
+console.log(product3.getProduct());
