@@ -3,6 +3,7 @@ import { Catalog } from "./catalog.js"
 import { Person } from "./person.js";
 import { Customers } from "./customers.js"
 
+let catalogList = "";
 
 // Product object 
 const product1 = new Product("McBook", 2000, "$");
@@ -24,8 +25,9 @@ customers.addCustomer(person2);
 
 console.log("Catalog:");
 catalog.productStore.forEach(product => {
-  console.log(product.getProduct());
+  catalogList += `<br>${product.getProduct()}`;
 });
 
-customers.showCustomers();
+catalogList += customers.showCustomers();
 
+document.querySelector('#output').innerHTML = catalogList;

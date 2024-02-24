@@ -8,10 +8,12 @@ export class Customers {
     }
 
     showCustomers() {
-        console.log("List of Customers:");
-        this.customersStore.forEach(customer => {
-            console.log(customer.getFullName());
-            console.log("Email:", customer.getEmail());
+        let custList = "<br><br>List of Customers:<br>"
+            this.customersStore.forEach(customer => {
+            custList += `Name: ${customer.getFullName()}, Email: ${customer.getEmail()}<br>`;
+            // console.log(customer.getFullName());
+            // console.log("Email:", customer.getEmail());
         });
+        return custList;
     }
 }
